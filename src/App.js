@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Paper, Typography } from "@mui/material";
+import "./App.css";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Paper sx={{ height: "10vh" }}>
+        <Typography
+          variant="h5"
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          {String.fromCodePoint(0x0001f44b)} Weekday Assignment
+        </Typography>
+      </Paper>
+      <SearchPage />
     </div>
   );
 }
