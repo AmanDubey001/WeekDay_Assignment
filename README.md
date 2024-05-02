@@ -1,11 +1,16 @@
 <img width="960" alt="2024-05-03" src="https://github.com/AmanDubey001/WeekDay_Assignment/assets/98492153/1cf2cd0a-ffea-4200-b848-d262cf670f0e">
 
 Technology Stack Used:
+
+
 1.ReactJs
+
 2.CSS
+
 3.Material UI
 
 Requirements FulFilled:
+
 1.Job Cards: Made as per the Website
 
 2.Job title : Added Job Title
@@ -23,6 +28,7 @@ Requirements FulFilled:
 
 
 Filters Implementation : 
+
 1.Min experience : Added Min Exp Filter
 
 2.Company name : No Company Name coming in the Api so commented out the code for it 
