@@ -90,5 +90,5 @@ export const DisplaySalary = (item) => {
     return `${item?.minJdSalary}-${item?.maxJdSalary} LPA`;
   else if (item?.minJdSalary) return `From ${item?.minJdSalary} LPA`;
   else if (item?.maxJdSalary) return `${item?.maxJdSalary} LPA`;
-  else `Not Disclosed`;
+  else return `Not Disclosed`;
 };
