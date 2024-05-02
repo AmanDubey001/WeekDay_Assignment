@@ -7,11 +7,17 @@ Technology Stack Used:
 
 Requirements FulFilled:
 1.Job Cards: Made as per the Website
+
 2.Job title : Added Job Title
+
 3.Company name : Added Mock Company Name as Api Is not sending the Company Name
+
 4.Location : Added
+
 5.Job description (limited to a certain number of characters with an option to expand) : Added Show More and Show Less Button
+
 6.Experience required : Added Experience
+
 7.Apply button/link : Redirecting to weekday website
 
 
@@ -22,11 +28,17 @@ Filters Implementation :
 2.Company name : No Company Name coming in the Api so commented out the code for it 
 
 3.Location : Added Location Filter
+
 4.Remote/on-site : Added 
+
 5.Tech stack Filter : Added
+
 6.Role: Added Filter
+
 7.Min base pay : Added Filter
+
 8.Infinte Scroll : Added
+
 9.Responsiveness : Complete Assignment is Responsive
 
 Commands to be used:
