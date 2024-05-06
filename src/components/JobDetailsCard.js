@@ -1,4 +1,4 @@
-import { Box, Button, Paper, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography,Chip } from "@mui/material";
 import logo from "../assets/logo.png";
 import React, { useState } from "react";
 import { DisplaySalary } from "../pages/Data";
@@ -26,10 +26,18 @@ const JobDetailsCard = ({ item }) => {
         transition: "transform 0.3s ease-in-out",
         transform: isHovered ? "scale(1.05)" : "scale(1)",
       }}
+      elevation={3}
     >
-      <Box sx={{ display: "flex", gap: 1 }}>
+       <Chip
+        label="⏳ Posted 4 days ago"
+        variant="outlined"
+        size="small"
+        sx={{ width: "107px", fontSize: "9px" }}
+      ></Chip>
+
+      <Box mt={2} sx={{ display: "flex", gap: 1 }}>
         <Box sx={{ width: "40px" }}>
-          <img src={logo} width="100%" />
+          <img src={item?.logoUrl} width="100%" />
         </Box>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Typography
@@ -41,7 +49,7 @@ const JobDetailsCard = ({ item }) => {
               letterSpacing: 1,
             }}
           >
-            WeekDay
+            {item?.companyName}
           </Typography>
           <Typography
             mt={0.5}
@@ -97,7 +105,7 @@ const JobDetailsCard = ({ item }) => {
       <Box
         sx={{
           position: "relative",
-          bottom: 20,
+          bottom:  showMore ? 0 : 20,
           display: "flex",
           justifyContent: "center",
           width: "100%",

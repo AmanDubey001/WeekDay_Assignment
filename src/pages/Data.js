@@ -85,6 +85,13 @@ export const CheckSalary = (item, salary) => {
   } else return true;
 };
 
+export const CheckCompany = (item, value) => {
+  if (value?.length) {
+    const search = value.toUpperCase().slice(0,1) + value.toLowerCase().slice(1);
+    return item?.companyName?.startsWith(search)
+  } else return true;
+};
+
 export const DisplaySalary = (item) => {
   if (item?.minJdSalary && item?.maxJdSalary)
     return `${item?.minJdSalary}-${item?.maxJdSalary} LPA`;

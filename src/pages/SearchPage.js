@@ -1,7 +1,7 @@
 import { Autocomplete, Box, CircularProgress, Grid, TextField, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Filters from "../components/Filters";
-import { CheckExp, CheckJobRole, CheckLocation, CheckSalary, EMPLOYEES, EXPERIENCE, JOB_TYPE, ROLE, SALARY } from "./Data";
+import { CheckCompany, CheckExp, CheckJobRole, CheckLocation, CheckSalary, EMPLOYEES, EXPERIENCE, JOB_TYPE, ROLE, SALARY } from "./Data";
 import JobDetailsCard from "../components/JobDetailsCard";
 import noData from "../assets/noData.png"
 
@@ -16,6 +16,7 @@ const SearchPage = () => {
   const [filteredDetails,setFilteredDetails] = useState([]);
   const [page,setPage] = useState(0);
   const [loading,setLoading] = useState(false);
+  const [filtering,setFiltering] = useState(false);
 
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const SearchPage = () => {
         setLoading(false);
         const res = JSON.parse(result);
         setDetails([...details,...res?.jdList]);
-        setFilteredDetails([...filteredDetails,...res?.jdList])
+        // setFilteredDetails([...filteredDetails,...res?.jdList])
       })
       .catch((error) => {
         setLoading(false);
@@ -61,15 +62,16 @@ const SearchPage = () => {
 
   useEffect(()=>{
 
-  const filteredData = details?.filter(item =>{
+   setFiltering(true); 
+const filteredData = details?.filter(item =>{
  
  return(
-     CheckJobRole(item,roles) && CheckExp(item,experience) && CheckSalary(item,salary) && CheckLocation(item,jobType)
+     CheckJobRole(item,roles) && CheckExp(item,experience) && CheckSalary(item,salary) && CheckLocation(item,jobType) && CheckCompany(item,companyName)
     )
    })
-
+    setFiltering(false);
    setFilteredDetails([...filteredData]);
-  },[roles,experience,salary,jobType,details])
+  },[roles,experience,salary,jobType,details,companyName])
 
 const handleScroll = () => {
     const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
@@ -78,11 +80,10 @@ const handleScroll = () => {
     }
   };
 
-
   return (
     <Box>
-      <Grid container columnGap={2} rowGap={0} justifyContent="center" alignItems="center" p={2}>
-        <Grid xs={12} sm={5} md={2.5}  item>
+      <Grid container columnGap={2} rowSpacing={0} justifyContent="center" alignItems="center" p={2}>
+        <Grid xs={12} sm={5} md={2.5}   item>
           <Filters
             data={ROLE}
             label="Roles"
@@ -122,20 +123,21 @@ const handleScroll = () => {
             setValue={setSalary}
           />
         </Grid>
-        {/* <Grid item>
+        <Grid  xs={12} sm={5} md={3} item>
         <TextField
           type="text"
           sx={{ minWidth: 200, maxWidth: 300 }}
+          fullWidth
           autoFocus={false}
           value={companyName}
           onChange={e=>setCompanyName(e.target.value)}
           size="small"
           placeholder="Search Company Name"
         /> 
-        </Grid> */}
+        </Grid>
       </Grid>
       <Grid container p={2} rowSpacing={4} columnSpacing={4} >
-      {filteredDetails?.length ? filteredDetails?.map(item =>{
+      {(filteredDetails?.length && !filtering) ? filteredDetails?.map(item =>{
         return(
           <Grid item xs={12} sm={6} md={4}>
           <JobDetailsCard item={item}/>
