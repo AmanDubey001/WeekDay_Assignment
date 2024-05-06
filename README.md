@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+<img width="960" alt="2024-05-03" src="https://github.com/AmanDubey001/WeekDay_Assignment/assets/98492153/1cf2cd0a-ffea-4200-b848-d262cf670f0e">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technology Stack Used:
 
-## Available Scripts
 
-In the project directory, you can run:
+1.ReactJs
 
-### `npm start`
+2.CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.Material UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Requirements FulFilled:
 
-### `npm test`
+1.Job Cards: Made as per the Website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2.Job title : Added Job Title
 
-### `npm run build`
+3.Company name : Added Mock Company Name as Api Is not sending the Company Name
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4.Location : Added
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5.Job description (limited to a certain number of characters with an option to expand) : Added Show More and Show Less Button
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6.Experience required : Added Experience
 
-### `npm run eject`
+7.Apply button/link : Redirecting to weekday website
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Filters Implementation : 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1.Min experience : Added Min Exp Filter
 
-## Learn More
+2.Company name : No Company Name coming in the Api so commented out the code for it 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.Location : Added Location Filter
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4.Remote/on-site : Added 
 
-### Code Splitting
+5.Tech stack Filter : Added
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6.Role: Added Filter
 
-### Analyzing the Bundle Size
+7.Min base pay : Added Filter
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+8.Infinte Scroll : Added
 
-### Making a Progressive Web App
+9.Responsiveness : Complete Assignment is Responsive
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Commands to be used:
+1. Git clone
+2. npm i --legacy-peer-deps
+3. npm start
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
